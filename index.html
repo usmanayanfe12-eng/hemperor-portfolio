@@ -1,0 +1,1565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="HEMPEROR — Shopify store design, e-commerce optimization and dropshipping guidance.">
+<title>HEMPEROR® | Shopify & E-commerce</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #090909;
+  --panel: #121212;
+  --gold: #d5b477;
+  --gold2: #f0d7a0;
+  --white: #f7f4ed;
+  --muted: #aaa69d;
+  --line: rgba(255,255,255,.12);
+  --max: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+.container {
+  width: min(var(--max), 90%);
+  margin: auto;
+}
+
+.section {
+  padding: 92px 0;
+}
+
+.alt {
+  background: #0e0e0e;
+  border-block: 1px solid var(--line);
+}
+
+.eyebrow {
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h2 {
+  font: 400 clamp(34px, 5vw, 56px)/1.15 "Playfair Display", Georgia, serif;
+  margin: 13px 0 17px;
+}
+
+.gold {
+  color: var(--gold);
+}
+
+.muted, .intro {
+  color: var(--muted);
+}
+
+.intro {
+  max-width: 680px;
+}
+
+.section-head {
+  margin-bottom: 38px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 19px;
+  border: 1px solid var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #111;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--gold2);
+  color: #111;
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: #111;
+}
+
+.btn-small {
+  padding: 9px 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9,9,9,.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font: 700 23px "Playfair Display", Georgia, serif;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.menu {
+  display: none;
+  background: none;
+  color: white;
+  border: 1px solid var(--line);
+  padding: 8px;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 80% 40%, rgba(213,180,119,.14), transparent 38%),
+    linear-gradient(110deg, #090909 55%, #19150e);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 55px;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.hero h1 {
+  font: 400 clamp(49px, 6.8vw, 82px)/1.04 "Playfair Display", Georgia, serif;
+  letter-spacing: -1.5px;
+  margin: 22px 0;
+}
+
+.hero p.lead {
+  color: #b9b5ac;
+  max-width: 570px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-photo {
+  position: relative;
+  max-width: 470px;
+  justify-self: end;
+}
+
+.hero-photo img {
+  aspect-ratio: 4/5;
+  object-position: center 24%;
+  border: 1px solid rgba(213,180,119,.5);
+  filter: saturate(.92);
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 18px;
+  left: -24px;
+  background: #101010;
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+}
+
+.photo-caption strong {
+  display: block;
+  font: 20px "Playfair Display", Georgia, serif;
+}
+
+.photo-caption small {
+  color: var(--gold);
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+.trust {
+  border-bottom: 1px solid var(--line);
+  background: #101010;
+}
+
+.trust-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.trust-inner span {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #d5d0c6;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-photo {
+  max-height: 550px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #151515;
+}
+
+.about-photo img {
+  aspect-ratio: 4/5;
+  object-position: center 22%;
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin: 14px 0;
+}
+
+.checks {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+  margin: 22px 0;
+}
+
+.checks li {
+  font-size: 13px;
+}
+
+.checks li:before {
+  content: "✦";
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+/* SERVICES */
+
+.services {
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 25px;
+  transition: .2s;
+}
+
+.card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+
+.num {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold);
+}
+
+.card h3 {
+  font: 400 23px "Playfair Display", Georgia, serif;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.card a.text-link {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+/* PORTFOLIO */
+
+.projects {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+
+.project-img {
+  position: relative;
+  aspect-ratio: 1.5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #171717;
+}
+
+.project-img img {
+  height: 100%;
+  transition: .35s;
+  opacity: .85;
+}
+
+.project:hover img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.project-img span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 16px 13px;
+  background: linear-gradient(transparent, rgba(0,0,0,.9));
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+.project-info {
+  padding: 14px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-info h3 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-info p {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.project-info a {
+  font-size: 12px;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+/* SALES PROOF */
+
+.proof-grid, .review-grid, .gallery {
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+.proof-icon {
+  color: var(--gold);
+  font-size: 25px;
+}
+
+.proof-card h3 {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+.proof-card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.gallery-item {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  aspect-ratio: 1.25;
+}
+
+.gallery-item div {
+  padding: 13px;
+}
+
+.gallery-item h3 {
+  font-size: 13px;
+}
+
+.gallery-item p {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* REVIEWS */
+
+.review {
+  padding: 23px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.review .stars {
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.review blockquote {
+  font-size: 13px;
+  color: #d8d3ca;
+  margin: 15px 0;
+}
+
+.review small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.review-label {
+  border: 1px dashed rgba(213,180,119,.5);
+  padding: 15px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.review-label strong {
+  color: var(--gold);
+}
+
+/* MENTORSHIP */
+
+.mentorship {
+  background:
+    radial-gradient(ellipse at 80% 30%, rgba(213,180,119,.1), transparent 40%),
+    #111;
+  border-block: 1px solid var(--line);
+}
+
+.mentor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.mentor-panel {
+  background: #090909;
+  border: 1px solid var(--line);
+  padding: 27px;
+}
+
+.mentor-panel h3 {
+  font: 400 25px "Playfair Display", Georgia, serif;
+  margin-bottom: 14px;
+}
+
+.step {
+  display: flex;
+  gap: 15px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.step:last-child {
+  border: 0;
+}
+
+.step b {
+  color: var(--gold);
+}
+
+.step p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* FAQ */
+
+.faq {
+  max-width: 850px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.question {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  background: none;
+  border: 0;
+  color: white;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.question span:last-child {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.answer {
+  display: none;
+  padding: 0 25px 20px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.faq-item.open .answer {
+  display: block;
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 55px;
+}
+
+.contact-copy p {
+  color: var(--muted);
+  margin: 14px 0;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 13px;
+  background: #101010;
+  color: white;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  border-color: var(--gold);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.status {
+  font-size: 12px;
+  color: var(--gold);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+footer {
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-inner p,
+.footer-inner a {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: .6s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior: auto; }
+  *, *:before, *:after { transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* TABLET */
+
+@media(max-width:850px) {
+  .menu { display: block; }
+
+  .nav { position: relative; }
+
+  .nav > .btn { display: none; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 74px;
+    left: -5.5%;
+    right: -5.5%;
+    padding: 20px 6%;
+    background: #101010;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 60px 0;
+  }
+
+  .hero-photo {
+    justify-self: start;
+    width: min(100%,420px);
+  }
+
+  .about-grid,
+  .mentor-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo { max-width: 450px; }
+
+  .services,
+  .proof-grid,
+  .review-grid,
+  .gallery {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:560px) {
+  .section { padding: 70px 0; }
+
+  .hero h1 { font-size: 53px; }
+
+  .services,
+  .proof-grid,
+  .review-grid,
+  .gallery,
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-inner { justify-content: flex-start; }
+
+  .photo-caption { left: 10px; }
+
+  .hero-photo { max-width: 100%; }
+
+  .footer-inner { flex-direction: column; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">HEM<span>PEROR</span>®</a>
+
+    <button class="menu" id="menu"
+      aria-expanded="false" aria-label="Toggle menu">☰ Menu</button>
+
+    <ul class="nav-links" id="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Portfolio</a></li>
+      <li><a href="#proof">Sales Proof</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <a class="btn btn-outline btn-small"
+       href="https://wa.me/message/FXB66QJPJSK7B1"
+       target="_blank" rel="noopener">Let's Talk ↗</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="reveal">
+      <p class="eyebrow">Shopify · E-commerce · Growth</p>
+
+      <h1>
+        Building stores.<br>
+        Creating <em class="gold">experiences.</em>
+      </h1>
+
+      <p class="lead">
+        I'm HEMPEROR, a Shopify and e-commerce specialist focused on
+        store design, conversion-focused improvements, product
+        presentation, and helping aspiring entrepreneurs understand
+        the dropshipping journey.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-gold" href="#work">Explore My Work ↗</a>
+        <a class="btn btn-outline"
+           href="https://wa.me/message/FXB66QJPJSK7B1"
+           target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+
+      <ul class="checks">
+        <li>Shopify store design & redesign</li>
+        <li>Store audits and CRO</li>
+        <li>Dropshipping guidance</li>
+      </ul>
+    </div>
+
+    <div class="hero-photo reveal">
+      <img src="assets/hemperor.jpg"
+           alt="HEMPEROR — e-commerce specialist portrait">
+      <div class="photo-caption">
+        <strong>HEMPEROR®</strong>
+        <small>SHOPIFY & E-COMMERCE</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-inner">
+    <span>SHOPIFY STORE DESIGN</span>
+    <span>CONVERSION OPTIMIZATION</span>
+    <span>PRODUCT LISTING</span>
+    <span>DROPSHIPPING GUIDANCE</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-grid">
+
+    <div class="about-photo reveal">
+      <img src="assets/hemperor.jpg" alt="HEMPEROR portrait">
+    </div>
+
+    <div class="reveal">
+      <p class="eyebrow">A Little About Me</p>
+
+      <h2>Good stores are built with <span class="gold">intention.</span></h2>
+
+      <p class="muted">
+        I work with aspiring entrepreneurs and e-commerce brands who
+        want to build, improve, or better understand their online stores.
+      </p>
+
+      <p class="muted">
+        My approach focuses on the details that shape a customer's
+        experience: storefront design, product pages, navigation,
+        trust, mobile usability, and marketing fundamentals.
+      </p>
+
+      <ul class="checks">
+        <li>Professional storefront design</li>
+        <li>Practical store audits and improvement plans</li>
+        <li>Product presentation and listing optimization</li>
+        <li>Beginner-friendly dropshipping guidance</li>
+      </ul>
+
+      <a class="btn btn-gold" href="#contact">Discuss Your Project ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section alt" id="services">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">What I Offer</p>
+      <h2>Services built around <span class="gold">your goals.</span></h2>
+      <p class="intro">
+        From launching a new store to improving an existing one,
+        let's identify the right next step for your business.
+      </p>
+    </div>
+
+    <div class="grid services">
+
+      <article class="card reveal">
+        <span class="num">01 / STOREFRONT</span>
+        <h3>Shopify Store Design</h3>
+        <p>
+          Brand-aligned storefronts with thoughtful layouts, clear
+          navigation, mobile-friendly design, and consistent
+          product presentation.
+        </p>
+        <a class="text-link" href="#contact">Discuss store design ↗</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">02 / OPTIMIZATION</span>
+        <h3>Store Audit & CRO</h3>
+        <p>
+          Review the customer journey, identify friction points,
+          and build an actionable plan for better usability and
+          conversion readiness.
+        </p>
+        <a class="text-link" href="#contact">Request an audit ↗</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">03 / CATALOGUE</span>
+        <h3>Product Listing</h3>
+        <p>
+          Organized product pages, clear descriptions, structured
+          collections, and consistent product presentation.
+        </p>
+        <a class="text-link" href="#contact">Discuss listing ↗</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">04 / MARKETING</span>
+        <h3>Meta Ads Strategy</h3>
+        <p>
+          Campaign planning, creative testing ideas, and guidance
+          on evaluating ad performance and costs.
+        </p>
+        <a class="text-link" href="#contact">Discuss marketing ↗</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">05 / MENTORSHIP</span>
+        <h3>Dropshipping Guidance</h3>
+        <p>
+          Learn product research, store setup, suppliers,
+          marketing fundamentals, budgeting, and business risks.
+        </p>
+        <a class="text-link" href="#mentorship">Explore mentorship ↗</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">06 / SUPPORT</span>
+        <h3>Shopify Store Support</h3>
+        <p>
+          Help with store structure, storefront improvements,
+          product organization, and common Shopify tasks.
+        </p>
+        <a class="text-link" href="#contact">Get in touch ↗</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WEBSITE PORTFOLIO -->
+<section class="section" id="work">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">Visual Portfolio</p>
+      <h2>E-commerce design that makes an <span class="gold">impression.</span></h2>
+      <p class="intro">
+        Illustrative store design inspiration. Replace these stock
+        images with screenshots of actual stores you have worked on
+        before describing them as client projects.
+      </p>
+    </div>
+
+    <div class="grid projects">
+
+      <article class="project reveal">
+        <div class="project-img">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1000&q=85"
+            alt="Beauty product photography">
+          <span>BEAUTY & SKINCARE · VISUAL CONCEPT</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <h3>Beauty Store</h3>
+            <p>Product presentation · Brand aesthetics</p>
+          </div>
+          <a href="#contact">Enquire ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-img">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern home interior">
+          <span>HOME & LIVING · VISUAL CONCEPT</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <h3>Home Decor Store</h3>
+            <p>Visual merchandising · Collections</p>
+          </div>
+          <a href="#contact">Enquire ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-img">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=85"
+            alt="Sneaker product image">
+          <span>FASHION · VISUAL CONCEPT</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <h3>Fashion Store</h3>
+            <p>Product imagery · Collection layout</p>
+          </div>
+          <a href="#contact">Enquire ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-img">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1000&q=85"
+            alt="Perfume product image">
+          <span>FRAGRANCE · VISUAL CONCEPT</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <h3>Fragrance Store</h3>
+            <p>Premium positioning · Storytelling</p>
+          </div>
+          <a href="#contact">Enquire ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-img">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=85"
+            alt="Minimal wristwatch product image">
+          <span>ACCESSORIES · VISUAL CONCEPT</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <h3>Accessories Store</h3>
+            <p>Minimal layout · Product focus</p>
+          </div>
+          <a href="#contact">Enquire ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-img">
+          <img loading="lazy"
+            src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85"
+            alt="Spa and wellness setting">
+          <span>WELLNESS · VISUAL CONCEPT</span>
+        </div>
+        <div class="project-info">
+          <div>
+            <h3>Wellness Store</h3>
+            <p>Lifestyle imagery · Clear product journey</p>
+          </div>
+          <a href="#contact">Enquire ↗</a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="note">
+      These are stock images and visual concepts, not evidence of
+      completed client projects. Use your own store screenshots
+      for a true portfolio.
+    </p>
+
+  </div>
+</section>
+
+<!-- SALES PROOF -->
+<section class="section alt" id="proof">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">Performance Evidence</p>
+      <h2>Let the <span class="gold">evidence speak.</span></h2>
+      <p class="intro">
+        Add genuine dashboards and project results here. These cards
+        are prepared sections, not claims of specific sales.
+      </p>
+    </div>
+
+    <div class="grid proof-grid">
+
+      <article class="card proof-card reveal">
+        <div class="proof-icon">▤</div>
+        <h3>Shopify Sales Dashboards</h3>
+        <p>
+          Insert genuine Shopify Analytics screenshots, reporting
+          dates, orders, and revenue context.
+        </p>
+      </article>
+
+      <article class="card proof-card reveal">
+        <div class="proof-icon">↗</div>
+        <h3>Advertising Results</h3>
+        <p>
+          Show real campaign data with spend, attributed purchases,
+          revenue, and reporting dates.
+        </p>
+      </article>
+
+      <article class="card proof-card reveal">
+        <div class="proof-icon">✓</div>
+        <h3>Store Improvements</h3>
+        <p>
+          Document authentic before-and-after screenshots, approved
+          client feedback, and measured results where available.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="grid gallery" style="margin-top:22px">
+
+      <article class="gallery-item reveal">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+          alt="Generic analytics illustration">
+        <div>
+          <h3>Sales Dashboard Slot</h3>
+          <p>Replace with your actual sales screenshot.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+          alt="Generic analytics screen">
+        <div>
+          <h3>Campaign Evidence Slot</h3>
+          <p>Replace with verified campaign results.</p>
+        </div>
+      </article>
+
+      <article class="gallery-item reveal">
+        <img loading="lazy"
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+          alt="Web development workspace">
+        <div>
+          <h3>Website Work Slot</h3>
+          <p>Replace with your own website screenshot.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="note">
+      Revenue is not profit. Keep dates and context visible, and
+      never present stock images as sales proof.
+    </p>
+
+  </div>
+</section>
+
+<!-- STUDENT REVIEWS -->
+<section class="section" id="reviews">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">Student Experiences</p>
+      <h2>Learning is a journey. <span class="gold">Progress matters.</span></h2>
+      <p class="intro">
+        A dedicated space for real feedback from people you've guided.
+      </p>
+    </div>
+
+    <div class="review-label">
+      <strong>Sample wording — not real testimonials.</strong>
+      These examples show the style of review you can use. Replace
+      them with real student feedback and get permission before
+      publishing names, photos, or results.
+    </div>
+
+    <div class="grid review-grid">
+
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          “The guidance helped me understand the steps involved in
+          setting up a store and what I needed to work on first.”
+        </blockquote>
+        <small>Sample testimonial · Replace with genuine student feedback</small>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          “I appreciated having the store structure and product-page
+          basics explained in a simple, practical way.”
+        </blockquote>
+        <small>Sample testimonial · Replace with genuine student feedback</small>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          “The process helped me think more clearly about product
+          research, costs, and how to approach marketing.”
+        </blockquote>
+        <small>Sample testimonial · Replace with genuine student feedback</small>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          “I learned to pay more attention to the customer experience,
+          mobile layout, and how products are presented.”
+        </blockquote>
+        <small>Sample testimonial · Replace with genuine student feedback</small>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          “The explanations gave me a clearer starting point and a
+          list of things to improve in my store.”
+        </blockquote>
+        <small>Sample testimonial · Replace with genuine student feedback</small>
+      </article>
+
+      <article class="review reveal">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          “I found the practical steps useful because I could work
+          through the process one stage at a time.”
+        </blockquote>
+        <small>Sample testimonial · Replace with genuine student feedback</small>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MENTORSHIP -->
+<section class="section mentorship" id="mentorship">
+  <div class="container mentor-grid">
+
+    <div class="reveal">
+      <p class="eyebrow">Dropshipping Mentorship</p>
+
+      <h2>
+        Start with a plan. Build with
+        <span class="gold">understanding.</span>
+      </h2>
+
+      <p class="muted">
+        My goal is to help beginners understand the process, make
+        informed decisions, and avoid common mistakes. Dropshipping
+        takes research, time, testing, and money; sales and profits
+        are never guaranteed.
+      </p>
+
+      <ul class="checks">
+        <li>Product and niche research</li>
+        <li>Shopify store setup and product pages</li>
+        <li>Supplier research and fulfilment</li>
+        <li>Organic content and paid advertising basics</li>
+        <li>Budgeting, testing, and realistic expectations</li>
+      </ul>
+
+      <a class="btn btn-gold"
+         href="https://discord.gg/qdjfnf5h2M"
+         target="_blank" rel="noopener">Join the Discord Server ↗</a>
+    </div>
+
+    <div class="mentor-panel reveal">
+      <h3>How we can approach it</h3>
+
+      <div class="step">
+        <b>01</b>
+        <div>
+          <strong>Understand your goals</strong>
+          <p>Discuss your experience, budget, time, and business idea.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <b>02</b>
+        <div>
+          <strong>Build your foundation</strong>
+          <p>Learn about products, suppliers, store structure, and business costs.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <b>03</b>
+        <div>
+          <strong>Plan your marketing</strong>
+          <p>Understand creative testing, organic marketing, and advertising risk.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <b>04</b>
+        <div>
+          <strong>Review and improve</strong>
+          <p>Use store data and feedback to decide what to improve next.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+
+    <div class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Before we <span class="gold">get started.</span></h2>
+    </div>
+
+    <div class="faq">
+
+      <div class="faq-item">
+        <button class="question" aria-expanded="false">
+          <span>Can you build a Shopify store from scratch?</span>
+          <span>+</span>
+        </button>
+        <div class="answer">
+          We can discuss your requirements for store structure, design,
+          product pages, collections, and mobile usability. The exact
+          scope and price should be agreed before work begins.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question" aria-expanded="false">
+          <span>Can you review my existing store?</span>
+          <span>+</span>
+        </button>
+        <div class="answer">
+          A review can cover navigation, product presentation, mobile
+          experience, trust elements, and opportunities to improve
+          the customer journey.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question" aria-expanded="false">
+          <span>Do you offer dropshipping guidance?</span>
+          <span>+</span>
+        </button>
+        <div class="answer">
+          Contact me to ask about current availability, what is
+          included, any fees, and the tools or budget you may need.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question" aria-expanded="false">
+          <span>Can you guarantee sales?</span>
+          <span>+</span>
+        </button>
+        <div class="answer">
+          No. Results depend on product demand, pricing, competition,
+          marketing, execution, and other factors. No specific
+          revenue or profit is guaranteed.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="question" aria-expanded="false">
+          <span>How do I get started?</span>
+          <span>+</span>
+        </button>
+        <div class="answer">
+          Send a message with the service you need, your current
+          situation, and your goals. We can discuss suitable next steps.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section alt" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-copy reveal">
+      <p class="eyebrow">Let's Work Together</p>
+
+      <h2>Your next step starts <span class="gold">here.</span></h2>
+
+      <p>
+        Tell me what you're building, where you're stuck, or what
+        you'd like to improve. Send an enquiry and let's discuss
+        the next step.
+      </p>
+
+      <div class="socials">
+        <a class="btn btn-gold"
+           href="https://wa.me/message/FXB66QJPJSK7B1"
+           target="_blank" rel="noopener">WhatsApp Me ↗</a>
+
+        <a class="btn btn-outline"
+           href="https://discord.gg/qdjfnf5h2M"
+           target="_blank" rel="noopener">Join Discord ↗</a>
+      </div>
+
+      <p>
+        <strong class="gold">Business email</strong><br>
+        <a href="mailto:hemperortundey@gmail.com">hemperortundey@gmail.com</a>
+      </p>
+    </div>
+
+    <form class="contact-form reveal" id="contact-form">
+
+      <div>
+        <label for="name">Your name</label>
+        <input id="name" name="name" required placeholder="Enter your name">
+      </div>
+
+      <div>
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+      </div>
+
+      <div>
+        <label for="service">What do you need help with?</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option>Shopify store design</option>
+          <option>Store audit and CRO</option>
+          <option>Product listing</option>
+          <option>Meta Ads and marketing</option>
+          <option>Dropshipping mentorship</option>
+          <option>Other enquiry</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Tell me about your project</label>
+        <textarea id="message" name="message" required
+          placeholder="What are you building, and what do you need?"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-gold">
+        Prepare Email Enquiry ↗
+      </button>
+
+      <p class="status" id="status" aria-live="polite">
+        This form opens your email app; it does not send or store messages by itself.
+      </p>
+
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> HEMPEROR®. All rights reserved.</p>
+    <p>Shopify · E-commerce · Digital Growth</p>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+// Mobile navigation
+const menu = document.getElementById("menu");
+const nav = document.getElementById("navlinks");
+
+menu.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menu.setAttribute("aria-expanded", String(open));
+  menu.textContent = open ? "✕ Close" : "☰ Menu";
+});
+
+nav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+    menu.textContent = "☰ Menu";
+  });
+});
+
+// FAQ accordion
+document.querySelectorAll(".question").forEach(button => {
+  button.addEventListener("click", () => {
+    const item = button.closest(".faq-item");
+    const open = item.classList.toggle("open");
+
+    button.setAttribute("aria-expanded", String(open));
+    button.lastElementChild.textContent = open ? "−" : "+";
+  });
+});
+
+// Current year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Scroll reveal animation
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll(".reveal").forEach(element => {
+    observer.observe(element);
+  });
+} else {
+  document.querySelectorAll(".reveal").forEach(element => {
+    element.classList.add("visible");
+  });
+}
+
+// Contact form
+// This opens the visitor's email app; it does not send directly.
+document.getElementById("contact-form").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const value = id => document.getElementById(id).value.trim();
+
+  const subject = encodeURIComponent(
+    "Portfolio enquiry: " + value("service")
+  );
+
+  const body = encodeURIComponent(
+    "Name: " + value("name") +
+    "\nEmail: " + value("email") +
+    "\nService: " + value("service") +
+    "\n\nMessage:\n" + value("message")
+  );
+
+  document.getElementById("status").textContent =
+    "Opening your email app. Please press Send in your email app to deliver the message.";
+
+  window.location.href =
+    "mailto:hemperortundey@gmail.com?subject=" + subject + "&body=" + body;
+});
+</script>
+
+</body>
+</html>
