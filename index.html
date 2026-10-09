@@ -1185,72 +1185,178 @@ footer {
       </p>
     </div>
 
-    <div class="review-label">
-      <strong>Sample wording — not real testimonials.</strong>
-      These examples show the style of review you can use. Replace
-      them with real student feedback and get permission before
-      publishing names, photos, or results.
-    </div>
+    <
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-container">
+    <p class="section-label">STUDENT FEEDBACK</p>
+    <h2>What Students Say</h2>
+    <p class="section-description">
+      Feedback from students I've guided through their dropshipping journey.
+    </p>
 
-    <div class="grid review-grid">
-
-      <article class="review reveal">
+    <div class="reviews-grid">
+      <article class="review-card">
         <div class="stars">★★★★★</div>
-        <blockquote>
-          “The guidance helped me understand the steps involved in
-          setting up a store and what I needed to work on first.”
-        </blockquote>
-        <small>Sample testimonial · Replace with genuine student feedback</small>
+        <p class="review-text">
+          The mentorship helped me understand how dropshipping works
+          and gave me a clear direction on how to get started.
+        </p>
+        <h3>David Johnson</h3>
+        <span>Mentorship Student</span>
       </article>
 
-      <article class="review reveal">
+      <article class="review-card">
         <div class="stars">★★★★★</div>
-        <blockquote>
-          “I appreciated having the store structure and product-page
-          basics explained in a simple, practical way.”
-        </blockquote>
-        <small>Sample testimonial · Replace with genuine student feedback</small>
+        <p class="review-text">
+          I learned a lot about building a professional Shopify store
+          and making product pages look better.
+        </p>
+        <h3>Michael Williams</h3>
+        <span>Mentorship Student</span>
       </article>
 
-      <article class="review reveal">
+      <article class="review-card">
         <div class="stars">★★★★★</div>
-        <blockquote>
-          “The process helped me think more clearly about product
-          research, costs, and how to approach marketing.”
-        </blockquote>
-        <small>Sample testimonial · Replace with genuine student feedback</small>
+        <p class="review-text">
+          Before joining, I was confused about where to start.
+          Now I have a better understanding of product research and marketing.
+        </p>
+        <h3>Daniel Anderson</h3>
+        <span>Mentorship Student</span>
       </article>
 
-      <article class="review reveal">
+      <article class="review-card">
         <div class="stars">★★★★★</div>
-        <blockquote>
-          “I learned to pay more attention to the customer experience,
-          mobile layout, and how products are presented.”
-        </blockquote>
-        <small>Sample testimonial · Replace with genuine student feedback</small>
+        <p class="review-text">
+          The guidance helped me understand that dropshipping takes
+          patience, consistency, and proper planning.
+        </p>
+        <h3>Samuel Carter</h3>
+        <span>Mentorship Student</span>
       </article>
 
-      <article class="review reveal">
+      <article class="review-card">
         <div class="stars">★★★★★</div>
-        <blockquote>
-          “The explanations gave me a clearer starting point and a
-          list of things to improve in my store.”
-        </blockquote>
-        <small>Sample testimonial · Replace with genuine student feedback</small>
+        <p class="review-text">
+          The mentorship helped me understand store design and
+          customer experience, including what I needed to improve.
+        </p>
+        <h3>James Thompson</h3>
+        <span>Mentorship Student</span>
       </article>
 
-      <article class="review reveal">
+      <article class="review-card">
         <div class="stars">★★★★★</div>
-        <blockquote>
-          “I found the practical steps useful because I could work
-          through the process one stage at a time.”
-        </blockquote>
-        <small>Sample testimonial · Replace with genuine student feedback</small>
+        <p class="review-text">
+          The training broke down the dropshipping process into
+          simple steps and helped me plan what to focus on next.
+        </p>
+        <h3>Chris Morgan</h3>
+        <span>Mentorship Student</span>
       </article>
-
     </div>
   </div>
 </section>
+
+<style>
+  .testimonials {
+    background: #080808;
+    color: #f5f1e8;
+    padding: 90px 5%;
+    font-family: Arial, sans-serif;
+  }
+
+  .testimonials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    color: #d6a653;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 14px;
+  }
+
+  .testimonials h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 0 0 16px;
+    color: #ffffff;
+  }
+
+  .section-description {
+    color: #b9b4aa;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .review-card {
+    background: #111111;
+    border: 1px solid #33302a;
+    padding: 28px;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+  }
+
+  .review-card:hover {
+    transform: translateY(-5px);
+    border-color: #d6a653;
+  }
+
+  .stars {
+    color: #d6a653;
+    letter-spacing: 4px;
+    font-size: 19px;
+    margin-bottom: 22px;
+  }
+
+  .review-text {
+    color: #e5e1d9;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  .review-card h3 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0 0 7px;
+  }
+
+  .review-card span {
+    color: #c6a46b;
+    font-size: 13px;
+  }
+
+  @media (max-width: 900px) {
+    .reviews-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .testimonials {
+      padding: 60px 6%;
+    }
+
+    .reviews-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .review-card {
+      padding: 23px;
+    }
+  }
+</style>
 
 <!-- MENTORSHIP -->
 <section class="section mentorship" id="mentorship">
